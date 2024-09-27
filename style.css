@@ -17,7 +17,8 @@
     align-items: center;
     background-color: white;
     padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
+    /* background-color: #f9ae65; */
 }
 
 .contact-info {
@@ -57,35 +58,30 @@
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 10px 0px;
-    border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px 0;
+  /* border-top: 1px solid #ddd; */
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    z-index: 100;
-    margin: 0;
-    left: 0;
-    right: 0;
+  display: flex;
+  list-style: none;
+  z-index: 100;
+  margin: 0; 
+  padding: 0; 
 }
 
 .nav-links li {
-    margin-left: 20px;
-}
-.nav-links {
-  margin: 0; /* Ensure no margins are causing overflow */
-  width: 100%; /* Make sure it doesn't exceed 100% */
+  margin: 0 20px; 
 }
 
 .nav-links li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 #google_translate_element{
     text-align: right;
@@ -143,12 +139,63 @@
 }
 
 /*-------------------------responsive navbar design new starts here------------------*/
+/*--------------------------new css starts here-----------------*/
+.csec-04 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  margin: 0;
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.cert-slider-container {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Continuous slider */
+.cert-slider {
+  display: flex;
+  width: calc(100% * 7); /* 7 slides, adjust the number if more slides are added */
+  animation: slide-left 20s linear infinite;
+}
+
+.cert-slide {
+  min-width: 100%; /* Each slide takes up 100% width of the container */
+  flex-shrink: 0; /* Prevents shrinking of images */
+  transition: transform 0.5s ease;
+}
+
+.cert-slide img {
+  width: 100%; /* Ensure all images are the same size */
+  min-width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/* Animation to move slides continuously from right to left */
+@keyframes slide-left {
+  0% {
+      transform: translateX(0); /* Start from the right */
+  }
+  100% {
+      transform: translateX(-100%); /* Move one slide to the left */
+  }
+}
+/*--------------------------new css ends here-----------------*/
 /* Slider container styling */
 .slider-container {
     position: relative;
     width: 100%;
     max-width: 100%;
-    height: 400px;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -398,6 +445,7 @@
     font-weight: bold;
     text-align: center;
     align-items: center;
+    margin-top: 20px;
     padding: 10px;
     box-sizing: border-box;
     background-color: #c92127;
